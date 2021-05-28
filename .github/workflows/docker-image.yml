@@ -19,4 +19,4 @@ jobs:
     - name: Login to docker hub
       run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
     - name: Push the Docker image
-      run: docker push devops4taures/travelaudience-docker-nexus
+      run: docker push --all-tags devops4taures/travelaudience-docker-nexus
